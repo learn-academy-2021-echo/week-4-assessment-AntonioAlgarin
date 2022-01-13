@@ -10,7 +10,14 @@ num2 = 42
 num3 = 221
 # Expected output: '221 is odd'
 
-
+def even_or_odd number
+    if number % 2 == 1
+         "#{number} is odd."
+    elsif number % 2 == 0
+         "#{number} is even."
+    end
+end
+    p even_or_odd num3
 
 # -------------------2) Create a method that takes in a string and removes all the vowels from the string. Use the test variables provided. HINT: Check out this resource: https://ruby-doc.org/core-2.6/String.html#method-i-delete
 
@@ -21,7 +28,10 @@ album2 = 'Sgt Pepper'
 album3 = 'Abbey Road'
 # Expected output: 'bby Rd'
 
-
+def remove_all_vowels album
+    album = album.delete "aeiouAEIOU"
+end
+    p remove_all_vowels album3
 
 # -------------------3) Create a method that takes in a string and checks if the string is a palindrome. A palindrome is the same word spelled forwards or backwards. Use the test variables provided.
 
@@ -31,3 +41,13 @@ is_palindrome2 = 'LEARN'
 # Expected output: 'LEARN is not a palindrome'
 is_palindrome3 = 'Rotator'
 # Expected output: 'Rotator is a palindrome'
+
+def palindrome? (str)
+    if str.downcase == str.downcase.reverse
+       p "#{str} is a palindrome."
+    else
+       p "#{str} is not a palindrome."
+    end
+end
+
+palindrome? is_palindrome3
